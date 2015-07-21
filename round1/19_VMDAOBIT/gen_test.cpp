@@ -1,4 +1,5 @@
 /*
+	Compile with C++11
 	Subtask 1: m*n <= 18 (1..8)
 	Subtask 2: m,n <= 100 (9..20)
 	

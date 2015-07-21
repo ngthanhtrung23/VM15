@@ -82,7 +82,7 @@ def gen_buck(tree_scheme, gen_N, id_low, id_high):
 
 if __name__ == "__main__":
     print "Building solution"
-    os.system("g++ soln.cpp -o a.out")
+    os.system("g++ sol_linh.cpp -o a.out")
     print "Generating test cases"
     gen_example()
     gen_buck(random_tree, low_N, 2, 4)

@@ -3,6 +3,8 @@
 	Subtask 1: m*n <= 18 (1..8)
 	Subtask 2: m,n <= 100 (9..20)
 	
+	Test 8, 20 output -1
+	
 	(For subtask "no two steps share common cells"
 		I don't think it is neccesary)
 */	
@@ -66,10 +68,9 @@ string getString(int i){
 void printInput(string fileName, int m, int n){
 	ofstream f(fileName);
 	f << m << " " << n << endl;
-	for(int i=0; i<m; ++i){
-		for(int j=0; j<n; ++j) f << a[i][j] << " ";
-		f << endl;
-	}	
+	for(int i=0; i<m; ++i)
+	for(int j=0; j<n; ++j)
+		f << a[i][j] << ( (j+1==n) ? "\n":" " );
 	f.close();
 }
 
@@ -104,7 +105,7 @@ void genSmall(int from, int to){
 	for(int i=from; i<=to; ++i){
 		int m = rnd.next(3,6);
 		int n = rnd.next(3, 18/m);
-		genTest(i,m,n,rnd.next(5)==0);
+		genTest(i,m,n,i==to);
 	}
 }
 
@@ -122,7 +123,7 @@ int main(){
 	genExample();
 	genSmall(1,8);
 	for(int i=9; i<=18; ++i)
-		genTest(i, rnd.next(1,MAX), rnd.next(1,MAX), rnd.next(5)==0);
+		genTest(i, rnd.next(MAX/2,MAX), rnd.next(MAX/2,MAX) );
 	genTest(19,MAX,MAX,false);
 	genTest(20,MAX,MAX,true);
 

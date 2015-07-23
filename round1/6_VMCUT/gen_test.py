@@ -6,8 +6,8 @@ Testing scheme: 100 tests
 - 30 tests with N = 200, with varying density
 """
 import random
-PATH = "tests/"
 
+PATH = "tests/"
 
 def gen_random_graph(min_vertex_bound, max_vertex_bound, density=0.5):
     """
@@ -67,7 +67,7 @@ def gen_test_scheme(gen_bound, gen_density, id_low, id_high):
         write_test(i, data)
 
 if __name__ == "__main__":
-    gen_test_scheme(gen_low_bound, gen_random_density, 0, 9)
-    gen_test_scheme(gen_high_bound, gen_uniform_density, 10, 29)
-    gen_test_scheme(gen_high_bound, gen_random_density, 30, 69)
-    gen_test_scheme(gen_max_bound, gen_random_density, 70, 99)
+    gen_test_scheme(gen_low_bound, gen_random_density, 0, 5)
+    gen_test_scheme(gen_high_bound, gen_uniform_density, 6, 17)
+    gen_test_scheme(gen_high_bound, gen_random_density, 18, 41)
+    gen_test_scheme(gen_max_bound, gen_random_density, 42, 59)

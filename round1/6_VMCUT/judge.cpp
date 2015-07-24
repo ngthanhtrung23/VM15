@@ -20,15 +20,15 @@ int main() {
     // check D(H)
     int dh, t_dh;
     fscanf(spoj_p_out, "%d", &dh);
-    fscanf(spoj_t_out, "%d", &t_dh);
+    spoj_assert(fscanf(spoj_t_out, "%d", &t_dh);
 
     // check the set H 
     int h_size;
     set<int> h;
-    fscanf(spoj_t_out, "%d", &h_size);
+    spoj_assert(fscanf(spoj_t_out, "%d", &h_size));
     for (int i = 0; i < h_size; i++) {
         int vertex;
-        fscanf(spoj_t_out, "%d", &vertex);
+        spoj_assert(fscanf(spoj_t_out, "%d", &vertex));
         
         // verify whether the user's vertex is correct 
         spoj_assert(1 <= vertex && vertex <= n);

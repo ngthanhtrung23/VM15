@@ -4,16 +4,12 @@ using namespace std;
 
 typedef pair<int, int> pii;
 
-int n, m;
-vector<pii> edges;
-int dh;
-
-int t_dh;
-
 int main() {
     spoj_init();
 
     // input the graph
+    int n, m;
+    vector<pii> edges;
     fscanf(spoj_p_in, "%d%d", &n, &m);
     for (int i = 0; i < m; i++) {
         pii edge;
@@ -22,6 +18,7 @@ int main() {
     }
 
     // check D(H)
+    int dh, t_dh;
     fscanf(spoj_p_out, "%d", &dh);
     fscanf(spoj_t_out, "%d", &t_dh);
     spoj_assert(dh == t_dh);

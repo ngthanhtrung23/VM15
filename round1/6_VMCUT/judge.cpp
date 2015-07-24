@@ -1,4 +1,4 @@
-#include <spoj.h>
+#include "spoj.h"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -43,6 +43,8 @@ int main() {
             t_dh--;
     }
     spoj_assert(t_dh == 0);
+
+    fprintf(spoj_score, "1");
 
     return 0;
 }

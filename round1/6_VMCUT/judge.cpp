@@ -21,7 +21,6 @@ int main() {
     int dh, t_dh;
     fscanf(spoj_p_out, "%d", &dh);
     fscanf(spoj_t_out, "%d", &t_dh);
-    spoj_assert(dh == t_dh);
 
     // check the set H 
     int h_size;
@@ -40,15 +39,16 @@ int main() {
         h.insert(vertex);
     }
 
+    int counter = t_dh;
     for (int i = 0; i < m; i++) {
         if ((h.find(edges[i].first) != h.end() && h.find(edges[i].second) == h.end()) ||
             (h.find(edges[i].second) != h.end() && h.find(edges[i].first) == h.end()))
-            t_dh--;
+            counter--;
     }
     // verify whether the set H corresponds to D(H)
-    spoj_assert(t_dh == 0);
+    spoj_assert(counter == 0);
 
-    fprintf(spoj_score, "1");
+    fprintf(spoj_score, "%.2lf", double(t_dh) / dh);
 
     return 0;
 }

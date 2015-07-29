@@ -34,7 +34,7 @@ int main() {
     return 0;
 }
 
-const int MN = 10111000;
+const int MN = 1000111;
 double s[MN], f[MN];
 int sieve[MN];
 

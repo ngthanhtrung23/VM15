@@ -2,8 +2,7 @@
 	A greedy solution: start with empty set, each time greedily choose the best solution
 */
 
-#include <cstdio>
-#include <vector>
+#include <bits/stdc++.h>
 #define MAXN 205
 using namespace std;
 
@@ -64,6 +63,7 @@ void DFS(int u) {
 }
 
 int main() {
+    srand(time(NULL));
 	scanf("%d %d", &N, &M);
 	for (int i = 0; i < M; i++) {
 		int u, v;

@@ -1,3 +1,4 @@
+// To compile this code, add -I library/, so that spoj.h is available
 #include "spoj.h"
 #include <bits/stdc++.h>
 using namespace std;
